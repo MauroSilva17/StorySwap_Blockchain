@@ -8,6 +8,9 @@ dotenv.config();
 const config: HardhatUserConfig = {
   solidity: "0.8.18",
   defaultNetwork: "goerli",
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY as string,
+  },
   networks: {
     hardhat: {},
     goerli: {
